@@ -1,0 +1,21 @@
+# File
+folder_path: '/your/folder/path/'
+date_format: '%d-%m-%Y_%H-%M-%S'
+backup_name: 'DBNAME_'
+extension: '.sql'
+
+# Local backup
+command: 'PGPASSWORD=******* pg_dump --inserts -h 127.0.0.1 -p 5432 -U USERNAME DBNAME > '
+
+# Mail in case of error
+sender_add: 'yourmail@gmail.com'
+receiver_add: 'recipientmail@something.com'
+mail_password: '*********'
+smtp_server: 'smtp.gmail.com'
+smtp_port: 587
+
+# SFTP backup copy
+sftp_host: '192.168.1.200'
+sftp_username: 'username'
+sftp_password: '********'
+sftp_path: '/some/path/'
